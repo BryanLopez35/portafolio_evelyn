@@ -12,7 +12,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    category: "impresos",
+    category: "identidad",
     title: "Brilliant - Dental Laboratory",
     description:
       "Diseño de identidad corporativa y material promocional para laboratorio dental.",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     images: ["projects/sesion-2/1.jpg"],
   },
   {
-    category: "impresos",
+    category: "identidad",
     title: "Attana",
     description: "Manual de identidad corporativa para Attana.",
     type: "pdf",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     pdfUrl: "/projects/attana/Manual de identidad Attana.pdf",
   },
   {
-    category: "impresos",
+    category: "identidad",
     title: "New Life Hospital",
     description:
       "Manual de identidad corporativa para New Life Hospital. Hospital especializado en servicios bariátricos",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
       "/projects/new-life-hospital/Manual de identidad New Life Hospital.pdf",
   },
   {
-    category: "impresos",
+    category: "identidad",
     title: "Nakeji Dental",
     description: "Serie de ilustraciones para campaña publicitaria",
     type: "gallery",

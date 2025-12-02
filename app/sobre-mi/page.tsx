@@ -2,6 +2,7 @@
 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import DemoReel from "@/components/demo-reel"
 import Image from "next/image"
 import { SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiAdobelightroom, SiCanva, SiAdobepremierepro, SiCoreldraw } from "react-icons/si"
 import { Paintbrush } from "lucide-react"
@@ -182,6 +183,9 @@ export default function SobreMiPage() {
             </div>
           </div>
         </section>
+
+        {/* Demo Reel */}
+        <DemoReel />
 
         {/* CTA Section */}
         <section className="py-16 md:py-24 lg:py-32">

@@ -27,7 +27,7 @@ export default function Portfolio() {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
-          {["all", "fotografia", "impresos", "ilustracion"].map((category) => (
+          {["all", "fotografia", "identidad", "ilustracion"].map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -39,8 +39,8 @@ export default function Portfolio() {
                 ? "Todos"
                 : category === "fotografia"
                   ? "Fotografía"
-                  : category === "impresos"
-                    ? "Impresos"
+                  : category === "identidad"
+                    ? "Identidad"
                     : "Ilustración"}
             </button>
           ))}
