@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bordersnap.com'),
+  metadataBase: new URL('https://bordersnap.vercel.app'),
   title: {
     default: "BorderSnap | Agencia de Publicidad Profesional",
     template: "%s | BorderSnap"
@@ -70,16 +70,17 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_MX',
     alternateLocale: ['es_ES', 'es_CO', 'es_AR', 'es_CL'],
-    url: 'https://bordersnap.com',
+    url: 'https://bordersnap.vercel.app',
     siteName: 'BorderSnap',
     title: 'BorderSnap | Agencia de Publicidad en Tijuana, México y Latinoamérica',
     description: 'Agencia de publicidad especializada en diseño gráfico, branding y campañas digitales. Servicios en Tijuana, México y toda Latinoamérica.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://bordersnap.vercel.app/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'BorderSnap - Agencia de Publicidad',
+        type: 'image/jpeg',
       },
     ],
     countryName: 'Mexico',
@@ -88,7 +89,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BorderSnap | Agencia de Publicidad en Tijuana y Latinoamérica',
     description: 'Agencia de publicidad especializada en diseño gráfico, branding y campañas digitales. Servicios en México y Latinoamérica.',
-    images: ['/og-image.jpg'],
+    images: ['https://bordersnap.vercel.app/og-image.jpg'],
     creator: '@bordersnap',
   },
   icons: {
@@ -126,7 +127,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   alternates: {
-    canonical: 'https://bordersnap.com',
+    canonical: 'https://bordersnap.vercel.app',
   },
   verification: {
     google: 'google-site-verification-code', // Reemplazar con código real de Google Search Console
