@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
 export default function Hero() {
@@ -8,7 +9,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 z-10">
+          <div className="space-y-6 z-10 animate-fade-in-up">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance">
                 Publicidad que <span className="text-primary">impulsa</span> tu marca
@@ -35,39 +36,20 @@ export default function Hero() {
                 Contactar
               </a>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
-              <div>
-                <div className="text-3xl font-bold text-primary">150+</div>
-                <p className="text-white/70">Proyectos</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">98%</div>
-                <p className="text-white/70">Satisfacción</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">12+</div>
-                <p className="text-white/70">Años</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Visual */}
-          <div className="relative hidden md:flex items-center justify-center">
-            <div className="absolute w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
-            <div className="relative z-10 bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-              <div className="space-y-4">
-                <div className="h-32 bg-primary/30 rounded-xl flex items-center justify-center">
-                  <span className="text-white/50 text-center">Proyectos Creativos</span>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="h-24 bg-primary/20 rounded-lg"></div>
-                  <div className="h-24 bg-primary/20 rounded-lg"></div>
-                  <div className="h-24 bg-primary/20 rounded-lg"></div>
-                  <div className="h-24 bg-primary/20 rounded-lg"></div>
-                </div>
-              </div>
+          <div className="relative hidden md:flex items-center justify-center animate-fade-in-right">
+            <div className="absolute w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="relative z-10">
+              <Image
+                src="/BorderSnap-logo.png"
+                alt="BorderSnap Logo"
+                width={600}
+                height={400}
+                className="rounded-3xl hover:scale-105 transition-transform duration-300"
+                priority
+              />
             </div>
           </div>
         </div>

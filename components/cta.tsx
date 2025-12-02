@@ -2,7 +2,7 @@
 
 export default function CTA() {
   return (
-    <section className="bg-gradient-to-r from-secondary via-secondary/90 to-secondary text-white py-16 md:py-24">
+    <section id="contacto" className="bg-gradient-to-r from-secondary via-secondary/90 to-secondary text-white py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Necesitas potenciar tu marca?</h2>
         <p className="text-xl text-white/80 mb-8 leading-relaxed">
@@ -13,8 +13,8 @@ export default function CTA() {
         {/* Contact Info */}
         <div className="bg-border/30 backdrop-blur-md rounded-lg p-6 border border-border mb-8 max-w-2xl mx-auto">
           <p className="text-muted-foreground mb-2">Email</p>
-          <a href="mailto:info@publicidaddiseno.com" className="text-2xl font-bold text-primary hover:underline">
-            info@publicidaddiseno.com
+          <a href="mailto:evelyn.alvarez.haro@uabc.edu.mx" className="text-2xl font-bold text-primary hover:underline">
+            evelyn.alvarez.haro@uabc.edu.mx
           </a>
         </div>
 
