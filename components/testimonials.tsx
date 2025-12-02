@@ -27,11 +27,11 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
             Opiniones de <span className="text-primary">Clientes</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -40,11 +40,11 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:shadow-lg"
+              className="bg-card p-6 sm:p-8 rounded-xl border border-border hover:border-primary transition-all duration-300 hover:shadow-lg"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
@@ -54,7 +54,7 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-muted-foreground mb-6 leading-relaxed italic text-lg">"{testimonial.quote}"</p>
+              <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed italic text-base sm:text-lg">"{testimonial.quote}"</p>
 
               {/* Author */}
               <div className="border-t border-border pt-4">
@@ -66,11 +66,11 @@ export default function Testimonials() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-muted-foreground mb-6">¿Listo para transformar tu marca?</p>
+        <div className="text-center mt-8 sm:mt-12 md:mt-16">
+          <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">¿Listo para transformar tu marca?</p>
           <a
             href="#contacto"
-            className="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors font-bold text-lg"
+            className="inline-block bg-primary text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-primary/90 transition-colors font-bold text-base sm:text-lg"
           >
             Inicia tu Proyecto Hoy
           </a>

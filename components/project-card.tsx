@@ -40,7 +40,7 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
       onClick={onClick}
       className="group rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:shadow-xl cursor-pointer"
     >
-      <div className="relative overflow-hidden h-64">
+      <div className="relative overflow-hidden h-48 sm:h-56 md:h-64">
         <Image
           src={project.thumbnail}
           alt={project.title}
@@ -55,9 +55,9 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
           <ChevronRight className="text-white" size={24} />
         </div>
       </div>
-      <div className="p-6 bg-card">
-        <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
-        <p className="text-muted-foreground text-sm">{project.description}</p>
+      <div className="p-4 sm:p-6 bg-card">
+        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 sm:mb-2">{project.title}</h3>
+        <p className="text-muted-foreground text-xs sm:text-sm">{project.description}</p>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { X, FileText, ZoomIn, ChevronLeft, ChevronRight } from "lucide-react"
 import { Project } from "@/data/projects"
@@ -12,6 +12,16 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
+
+  // Prevenir scroll del body cuando el modal está abierto
+  useEffect(() => {
+    if (project) {
+      document.body.style.overflow = 'hidden'
+      return () => {
+        document.body.style.overflow = 'unset'
+      }
+    }
+  }, [project])
 
   if (!project) return null
 
@@ -44,17 +54,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   return (
     <>
       <div
-        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fade-in"
+        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2 sm:p-4 animate-fade-in"
         onClick={onClose}
       >
         <div
-          className="bg-card rounded-xl max-w-6xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar animate-scale-in"
+          className="bg-card rounded-xl max-w-6xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto custom-scrollbar animate-scale-in"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="sticky top-0 bg-card/95 backdrop-blur-md border-b border-border p-4 flex justify-between items-center z-10">
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
-              <p className="text-sm text-muted-foreground">{project.description}</p>
+          <div className="sticky top-0 bg-card/95 backdrop-blur-md border-b border-border p-3 sm:p-4 flex justify-between items-start sm:items-center gap-2 z-10">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground truncate">{project.title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">{project.description}</p>
             </div>
             <button
               onClick={onClose}
@@ -64,10 +74,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </button>
           </div>
 
-          <div className="p-6">
+          <div className="p-3 sm:p-4 md:p-6">
             {/* Single Image */}
             {project.type === "single" && (
-              <div className="relative w-full h-[600px] group cursor-pointer" onClick={() => setSelectedImageIndex(0)}>
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] group cursor-pointer" onClick={() => setSelectedImageIndex(0)}>
                 <Image
                   src={project.thumbnail}
                   alt={project.title}
@@ -85,7 +95,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Gallery or Complete Project - Masonry Layout */}
             {(project.type === "gallery" || project.type === "complete") && project.images && (
-              <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+              <div className="columns-1 sm:columns-2 lg:columns-3 gap-2 sm:gap-3 md:gap-4 space-y-2 sm:space-y-3 md:space-y-4">
                 {project.images.map((img, idx) => (
                   <div
                     key={idx}
@@ -115,16 +125,43 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* PDF Viewer */}
             {project.type === "pdf" && project.pdfUrl && (
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
+                {/* Visor optimizado para móviles */}
+                <div className="block sm:hidden">
+                  <object
+                    data={project.pdfUrl}
+                    type="application/pdf"
+                    className="w-full h-[70vh] rounded-lg border border-border"
+                  >
+                    <div className="bg-muted/50 border border-border rounded-lg p-4 text-center h-[70vh] flex flex-col items-center justify-center">
+                      <FileText className="mx-auto mb-3 text-primary" size={40} />
+                      <p className="text-sm text-muted-foreground mb-4 px-4">
+                        Tu navegador no puede mostrar el PDF. Descárgalo para verlo.
+                      </p>
+                      <a
+                        href={project.pdfUrl}
+                        download
+                        className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-all duration-200 font-medium text-sm"
+                      >
+                        <FileText size={18} />
+                        Descargar PDF
+                      </a>
+                    </div>
+                  </object>
+                </div>
+
+                {/* Visor de PDF para tablets y desktop */}
                 <iframe
                   src={project.pdfUrl}
-                  className="w-full h-[600px] rounded-lg border border-border custom-scrollbar"
+                  className="hidden sm:block w-full h-[500px] md:h-[600px] rounded-lg border border-border custom-scrollbar"
                   title={project.title}
                 />
+                
+                {/* Botón de descarga */}
                 <a
                   href={project.pdfUrl}
                   download
-                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-all duration-200 font-medium hover:shadow-lg hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-primary/90 transition-all duration-200 font-medium hover:shadow-lg hover:scale-105 text-sm sm:text-base"
                 >
                   <FileText size={20} />
                   Descargar PDF

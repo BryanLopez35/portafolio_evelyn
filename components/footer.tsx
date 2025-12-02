@@ -1,15 +1,17 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Mail, MapPin } from "lucide-react"
+import { services } from "@/data/services"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-secondary text-white py-12 md:py-16">
+    <footer className="bg-secondary text-white py-8 sm:py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -34,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="#servicios"
+                  href="/#servicios"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Servicios
@@ -42,7 +44,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#portafolio"
+                  href="/#portafolio"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Portafolio
@@ -50,15 +52,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#equipo"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Equipo
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contacto"
+                  href="/#contacto"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   Contacto
@@ -71,38 +65,16 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Servicios</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Diseño Gráfico
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Branding
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Redes Sociales
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Publicidad Digital
-                </a>
-              </li>
+              {services.slice(0, 4).map((service) => (
+                <li key={service.id}>
+                  <Link
+                    href={`/servicios/${service.id}`}
+                    className="text-white/70 hover:text-white transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -130,8 +102,8 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/20 pt-8">
           {/* Bottom Links */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
-            <div className="flex gap-6 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 mb-4 sm:mb-6">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
               <a
                 href="#"
                 className="text-white/70 hover:text-white transition-colors"
@@ -175,11 +147,11 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-center text-white/50 text-sm">
-            © {currentYear} PublicidadDiseño. Todos los derechos reservados. |
+            © {currentYear} BorderSnap. Todos los derechos reservados. |
             Diseñado y desarrollado con ❤️
           </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }

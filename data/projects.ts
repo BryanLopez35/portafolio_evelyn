@@ -25,18 +25,26 @@ export const projects: Project[] = [
   },
   {
     category: "fotografia",
-    title: "Sesión Fotográfica - Producto",
-    description: "Sesión completa de fotografía de producto para e-commerce",
+    title: "Sesión Fotográfica - XV Años",
+    description: "Sesión completa de fotografía de xv años, incluyendo edición profesional.",
     type: "gallery",
-    thumbnail: "/placeholder.svg",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    thumbnail: "projects/sesion-1/1.jpg",
+    images: ["projects/sesion-1/1.jpg", "projects/sesion-1/2.jpg"]
+  },
+    {
+    category: "fotografia",
+    title: "Sesión Fotográfica - XV Años",
+    description: "Sesión completa de fotografía de xv años, incluyendo edición profesional.",
+    type: "gallery",
+    thumbnail: "projects/sesion-2/1.jpg",
+    images: ["projects/sesion-2/1.jpg"]
   },
   {
     category: "ilustracion",
     title: "Attana",
     description: "Manual de identidad corporativa para Attana.",
     type: "pdf",
-    thumbnail: "/placeholder.svg",
+    thumbnail: "projects/attana/1.png",
     pdfUrl: "/projects/attana/Manual de identidad Attana.pdf",
   },
   {
@@ -62,13 +70,5 @@ export const projects: Project[] = [
       "projects/nakeji-dental/6.jpeg",
       "projects/nakeji-dental/7.jpeg",
     ],
-  },
-  {
-    category: "impresos",
-    title: "Manual de Identidad Corporativa",
-    description: "Documento completo de lineamientos de marca",
-    type: "pdf",
-    thumbnail: "/placeholder.svg",
-    pdfUrl: "/manual-identidad.pdf",
-  },
+  }
 ];
