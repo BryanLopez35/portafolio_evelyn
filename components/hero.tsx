@@ -16,8 +16,8 @@ export default function Hero() {
                 desde la frontera
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/80 text-balance">
-                Transformamos ideas en campañas visuales impactantes que
-                conectan con tu audiencia y generan resultados reales
+                Nos distingue una creatividad y eficacia inigualables en la
+                ciudad de Tijuana{" "}
               </p>
             </div>
 
