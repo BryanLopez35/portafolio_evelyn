@@ -3,7 +3,7 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Image from "next/image"
-import { SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiAdobelightroom, SiFigma, SiCanva, SiAdobepremierepro, SiAdobeaftereffects, SiAdobexd, SiCoreldraw, SiBlender } from "react-icons/si"
+import { SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiAdobelightroom, SiCanva, SiAdobepremierepro, SiCoreldraw } from "react-icons/si"
 import { Paintbrush } from "lucide-react"
 import { useRouter } from "next/navigation"
 
@@ -40,7 +40,7 @@ export default function SobreMiPage() {
               <div className="order-2 lg:order-1">
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/portrait.jpg"
+                    src="/Evelyn-Haro.jpg"
                     alt="Evelyn Haro - Diseñadora Gráfica"
                     fill
                     className="object-cover"
@@ -152,20 +152,16 @@ export default function SobreMiPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               {[
                 { name: "Photoshop", icon: SiAdobephotoshop, color: "#31A8FF" },
                 { name: "Illustrator", icon: SiAdobeillustrator, color: "#FF9A00" },
                 { name: "InDesign", icon: SiAdobeindesign, color: "#FF3366" },
                 { name: "Lightroom", icon: SiAdobelightroom, color: "#31A8FF" },
-                { name: "Figma", icon: SiFigma, color: "#F24E1E" },
                 { name: "Canva", icon: SiCanva, color: "#00C4CC" },
                 { name: "Premiere", icon: SiAdobepremierepro, color: "#9999FF" },
-                { name: "After Effects", icon: SiAdobeaftereffects, color: "#9999FF" },
                 { name: "Procreate", icon: Paintbrush, color: "#FF6B6B" },
-                { name: "Adobe XD", icon: SiAdobexd, color: "#FF61F6" },
-                { name: "CorelDRAW", icon: SiCoreldraw, color: "#00B050" },
-                { name: "Blender", icon: SiBlender, color: "#F5792A" }
+                { name: "CorelDRAW", icon: SiCoreldraw, color: "#00B050" }
               ].map((tool, index) => {
                 const Icon = tool.icon
                 return (
