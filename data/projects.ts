@@ -12,7 +12,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    category: "ilustracion",
+    category: "impresos",
     title: "Brilliant - Dental Laboratory",
     description:
       "Diseño de identidad corporativa y material promocional para laboratorio dental.",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     images: ["projects/sesion-2/1.jpg"],
   },
   {
-    category: "ilustracion",
+    category: "impresos",
     title: "Attana",
     description: "Manual de identidad corporativa para Attana.",
     type: "pdf",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     pdfUrl: "/projects/attana/Manual de identidad Attana.pdf",
   },
   {
-    category: "ilustracion",
+    category: "impresos",
     title: "New Life Hospital",
     description:
       "Manual de identidad corporativa para New Life Hospital. Hospital especializado en servicios bariátricos",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
       "/projects/new-life-hospital/Manual de identidad New Life Hospital.pdf",
   },
   {
-    category: "ilustracion",
+    category: "impresos",
     title: "Nakeji Dental",
     description: "Serie de ilustraciones para campaña publicitaria",
     type: "gallery",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     ],
   },
     {
-    category: "impresos",
+    category: "ilustracion",
     title: "Grupo Concordia",
     description:
       "Diseño e impresión para corporativo para empresa de construcción.",
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    category: "impresos",
+    category: "ilustracion",
     title: "Otay Campestre",
     description:
       "Diseño e impresión de material promocional para club deportivo.",
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     images: ["projects/otay-campestre/1.jpg", "projects/otay-campestre/2.jpg"],
   },
     {
-    category: "impresos",
+    category: "ilustracion",
     title: "Geoingenieros",
     description:
       "Diseño e impresión de papelería corporativa para empresa de construcción.",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     images: ["projects/geoingenieros/1.jpg"],
   },
     {
-    category: "impresos",
+    category: "ilustracion",
     title: "The Bakery",
     description:
       "Diseño e impresión material promocional para panadería local.",
@@ -119,7 +119,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    category: "impresos",
+    category: "ilustracion",
     title: "Personaje de Pizzeria",
     description:
       "Diseño e impresión de personaje ilustrado para pizzería local.",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
   },
 
   {
-    category: "impresos",
+    category: "ilustracion",
     title: "Maccato",
     description: "Diseño e impresión de material promocional para cafetería.",
     type: "gallery",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    category: "impresos",
+    category: "ilustracion",
     title: "Ace Dentistry",
     description:
       "Diseño gráfico e impresión de material promocional para clínica dental.",
