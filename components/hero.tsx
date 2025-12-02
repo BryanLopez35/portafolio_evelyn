@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -12,11 +12,12 @@ export default function Hero() {
           <div className="space-y-4 sm:space-y-6 z-10 animate-fade-in-up">
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-balance leading-tight">
-                Publicidad que <span className="text-primary">impulsa</span> tu marca
+                Resolvemos <span className="text-primary">gráficamente</span>{" "}
+                desde la frontera
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/80 text-balance">
-                Transformamos ideas en campañas visuales impactantes que conectan con tu audiencia y generan resultados
-                reales
+                Transformamos ideas en campañas visuales impactantes que
+                conectan con tu audiencia y generan resultados reales
               </p>
             </div>
 
@@ -55,5 +56,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
