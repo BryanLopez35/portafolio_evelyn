@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     description: 'Agencia de publicidad especializada en diseño gráfico, branding y campañas digitales. Servicios en Tijuana, México y toda Latinoamérica.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'BorderSnap - Agencia de Publicidad',
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BorderSnap | Agencia de Publicidad en Tijuana y Latinoamérica',
     description: 'Agencia de publicidad especializada en diseño gráfico, branding y campañas digitales. Servicios en México y Latinoamérica.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
     creator: '@bordersnap',
   },
   icons: {
