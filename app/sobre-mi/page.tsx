@@ -1,16 +1,19 @@
+"use client"
+
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Image from "next/image"
-import type { Metadata } from "next"
 import { SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiAdobelightroom, SiFigma, SiCanva, SiAdobepremierepro, SiAdobeaftereffects, SiAdobexd, SiCoreldraw, SiBlender } from "react-icons/si"
 import { Paintbrush } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Sobre Mí - Evelyn Haro",
-  description: "Diseñadora gráfica de Tijuana especializada en identidad visual, contenido digital y branding estratégico.",
-}
+import { useRouter } from "next/navigation"
 
 export default function SobreMiPage() {
+  const router = useRouter()
+
+  const handleContactClick = () => {
+    router.push("/#contacto")
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
