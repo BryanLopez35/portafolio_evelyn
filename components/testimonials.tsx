@@ -6,22 +6,22 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "El equipo transformó completamente nuestra marca. Los resultados superaron nuestras expectativas y el ROI fue excepcional.",
-      author: "Juan Pérez",
-      position: "CEO, TechStart Solutions",
+        "Creo que capturaron perfectamente el concepto que estábamos buscando para el diseño de nuestra app",
+      author: "Antonio Martínez",
+      position: "ATTANA",
       rating: 5,
     },
     {
       quote:
-        "Profesionales de alto nivel. La calidad del trabajo y la comunicación fueron impecables. Totalmente recomendados.",
-      author: "María López",
-      position: "Directora de Marketing, Retail Plus",
+        "Gran trabajo y compromiso en el diseño de toda la identidad de mi proyecto que está en puerta GAD",
+      author: "Corachi Ramírez",
+      position: "NAKEJI DENTAL Y NEW LIFE HOSPITAL",
       rating: 5,
     },
     {
-      quote: "Nuestras campañas en redes sociales aumentaron 300% en engagement. Excelente estrategia y ejecución.",
-      author: "Carlos Mendoza",
-      position: "Emprendedor, E-commerce Innovation",
+      quote: "Me gustó el concepto de mi logo con mi nombre para incursionar en mi carrera como dentista, me parece muy personal",
+      author: "Alan Cruz",
+      position: "CIRUJANO DENTISTA",
       rating: 5,
     },
   ]
